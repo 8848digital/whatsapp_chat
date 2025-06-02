@@ -87,7 +87,7 @@ def last_message(doc, method):
         frappe.get_doc({
             "doctype": "WhatsApp Contact",
             "mobile_no": mobile_no,
-            "last_message": last_message,
+            "last_message": doc.message,
             "contact_name": mobile_no,
             "is_read": 0
         }).save()
